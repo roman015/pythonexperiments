@@ -3,12 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonExperiments", "PythonExperiments\PythonExperiments.pyproj", "{4BB14A8B-A8BE-4BC7-A619-4C18EF2C5883}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NumberChain", "NumberChain\NumberChain.pyproj", "{0DA7AC59-F738-4D0E-AA50-7B12740FD6A1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{498B7A1A-6C71-472C-B69F-CDD6A8767407}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{33EB5CF3-3322-49CF-8A42-B06424246C5C}"
 	ProjectSection(SolutionItems) = preProject
 		Readme.md = Readme.md
-		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global
@@ -17,8 +16,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4BB14A8B-A8BE-4BC7-A619-4C18EF2C5883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4BB14A8B-A8BE-4BC7-A619-4C18EF2C5883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA7AC59-F738-4D0E-AA50-7B12740FD6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA7AC59-F738-4D0E-AA50-7B12740FD6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

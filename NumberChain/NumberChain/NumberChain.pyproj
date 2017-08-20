@@ -3,16 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4bb14a8b-a8be-4bc7-a619-4c18ef2c5883</ProjectGuid>
-    <ProjectHome>
-    </ProjectHome>
-    <StartupFile>DigitsDataset.py</StartupFile>
+    <ProjectGuid>0da7ac59-f738-4d0e-aa50-7b12740fd6a1</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>NumberChain.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>PythonExperiments</Name>
-    <RootNamespace>PythonExperiments</RootNamespace>
+    <Name>NumberChain</Name>
+    <RootNamespace>NumberChain</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,14 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Timing.py" />
-    <Compile Include="DigitsDataset.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IrisDataset.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="nba_2013.csv" />
+    <Compile Include="NumberChain.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
