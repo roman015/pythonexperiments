@@ -68,7 +68,7 @@ prime = []
 excludedPrimes = []
 
 # Trying out with multiple sets
-for setSize in range(1,23) :
+for setSize in range(1,30) :
     # Reset values
     result.clear()
     numSet = range(1,setSize+1)
