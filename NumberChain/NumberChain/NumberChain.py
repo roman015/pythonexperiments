@@ -25,8 +25,12 @@ def CreateGraph(numSet, visited, neighbours) :
             elif ((numSet[i] % numSet[j] == 0) or (numSet[j] % numSet[i] == 0)) :
                 neighbours[i].append(j);
 
+# Global variable to count number of solutions found
+NumberOfSolutions = 0
+
 # Brute Force Method
 def BruteForce(numSet, visited, neighbours, currIdx, filterOutputSize) :
+    global NumberOfSolutions
     result = visited[:]
 
     # Make a backup
@@ -53,6 +57,7 @@ def BruteForce(numSet, visited, neighbours, currIdx, filterOutputSize) :
 
             # Print if the solution is large enough
             if len(result) >= filterOutputSize :
+                NumberOfSolutions = NumberOfSolutions + 1
                 filterOutputSize = len(result)
                 print("Potential Chain: " + str(result))
                 print("Potential Length:" + str(len(result)))
@@ -63,6 +68,7 @@ def BruteForce(numSet, visited, neighbours, currIdx, filterOutputSize) :
 
 # Solve the problem for a specific size
 def Solve(setSize, outputSize) :
+    global NumberOfSolutions
     problemSize = []
     solutionSize = []
     excludedPrimeSize = []
@@ -73,6 +79,9 @@ def Solve(setSize, outputSize) :
     neighbours = []
     prime = []
     excludedPrimes = []
+
+    # Reset the Global Counter
+    NumberOfSolutions = 0
 
     # Fill the required data structures
     CreateGraph(numSet, visited, neighbours)
@@ -100,14 +109,39 @@ def Solve(setSize, outputSize) :
     return  result
 
 # SCRIPT STARTS HERE
-for problemSize in range (1, 5) :
-    maxSolution = 1
+ExpectedSizes = [1, 2, 3, 4, 4, 6, 6, 7, 8, 9, 9, 11, 11, 12, 13, 14, 14, 16, 16, 17, 18, 19, 19, 21, 21, 22, 23, 24, 24]
+
+#inputSize  = 2
+#outputSize = 2
+#while inputSize < 101 :
+#   inputSize = inputSize + 1
+
+#   print("Output : \t" + str(outputSize) + "\tInput : \t" + str(inputSize))
+#   outputSize = outputSize + 1
+
+#   if ((outputSize) % 5 == 0) :
+#       print("Output : \t" + str(outputSize-1) + "\tInput : \t" + str(inputSize+1))
+#       outputSize = outputSize  + 1
+#       print("Output : \t" + str(outputSize) + "\tInput : \t" + str(inputSize+2))
+#       inputSize = inputSize + 2
+
+    
+
+    
+
+    
+
+for problemSize in range (1, 20) :
+    #maxSolution = 1
     solution = []
-    start_time = time.clock()
-    solution = Solve(problemSize, maxSolution)
-    if len(solution) > maxSolution : 
-        maxSolution = len(solution)
-    end_time = time.clock()
+    start_time = time.time()
+    solution = Solve(problemSize, ExpectedSizes[problemSize-1])
+    #if len(solution) > maxSolution : 
+    #    maxSolution = len(solution)
+    end_time = time.time()
+    print()
     print("Problem Size : " + str(problemSize))
+    print("Solution Size : " + str(len(solution)))
+    print("Number of Solution : " + str(NumberOfSolutions))
     print("Time Taken : " + str(end_time-start_time))
     print("-----------------------------------------")
