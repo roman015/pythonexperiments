@@ -127,11 +127,8 @@ ExpectedSizes = [1, 2, 3, 4, 4, 6, 6, 7, 8, 9, 9, 11, 11, 12, 13, 14, 14, 16, 16
 
     
 
-    
-
-    
-
-for problemSize in range (1, 20) :
+total_start_time = time.time()
+for problemSize in range (1, 10) :
     #maxSolution = 1
     solution = []
     start_time = time.time()
@@ -145,3 +142,7 @@ for problemSize in range (1, 20) :
     print("Number of Solution : " + str(NumberOfSolutions))
     print("Time Taken : " + str(end_time-start_time))
     print("-----------------------------------------")
+    print()
+
+total_end_time = time.time()
+print("TOTAL TIME : " + str(total_end_time - total_start_time))
