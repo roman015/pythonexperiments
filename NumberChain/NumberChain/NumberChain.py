@@ -1,5 +1,6 @@
 import time
 import numpy
+import copy
 
 # Function to determine if given number is a prime
 def IsPrime(x) :
@@ -57,12 +58,31 @@ def BruteForce(numSet, visited, neighbours, currIdx, filterOutputSize) :
             if len(result) < len(currvisited) :
                 result = currvisited[:]
 
+            # Get the reversed Solution
+            reversed_result = copy.deepcopy(result)
+            reversed_result.reverse();
+
             # Print if the solution is large enough
-            if len(result) >= filterOutputSize and result not in Solutions:
+            if len(result) >= filterOutputSize and result not in Solutions and reversed_result not in Solutions:
                 NumberOfSolutions = NumberOfSolutions + 1
                 filterOutputSize = len(result)
                 Solutions.append(result)
                 print(str(result))
+
+    # Update Result
+    if len(result) < len(currvisited) :
+        result = currvisited[:]
+
+    # Get the reversed Solution
+    reversed_result = copy.deepcopy(result)
+    reversed_result.reverse();
+
+    # Print if the solution is large enough
+    if len(result) >= filterOutputSize and result not in Solutions and reversed_result not in Solutions:
+        NumberOfSolutions = NumberOfSolutions + 1
+        filterOutputSize = len(result)
+        Solutions.append(result)
+        print(str(result))
 
     visited.clear()
     for currVal in result :
