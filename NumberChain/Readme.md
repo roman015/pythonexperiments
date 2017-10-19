@@ -1,6 +1,6 @@
-# List of Projects
+# NumberChain
 
-**NumberChain**
+**About**
  
 My attempt (hopefully I'll get around to completing this) at this interesting number chain problem.
 
