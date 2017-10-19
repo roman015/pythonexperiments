@@ -1,6 +1,6 @@
-# List of Projects
+# Python Experiments
 
-**PythonExperiments**
+**About**
  
 Just a dump for python code, currently toying with python basics.
  
